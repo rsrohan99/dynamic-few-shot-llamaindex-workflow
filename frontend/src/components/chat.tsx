@@ -8,7 +8,7 @@ const Chat = () => {
       api: import.meta.env.VITE_CHAT_API_URL,
     });
   return (
-    <div className="h-[100vh] w-[100vw] flex justify-center items-center bg-white">
+    <div className="h-[100vh] w-[90vw] flex justify-center items-center bg-white">
       <div className="rounded-xl flex flex-col h-[90vh] w-[80vw]">
         <div className="flex-grow">
           {messages.map((message) => (
@@ -23,13 +23,12 @@ const Chat = () => {
                   {message.content}
                 </Markdown>
               </div>
-              {/* {message.role === "user" ? "User: " : "AI: "} */}
             </div>
           ))}
         </div>
         <form onSubmit={handleSubmit} className="flex gap-3">
           <input
-            className={`rounded-xl h-20 w-full bg-gray-100 px-4 text-gray-600 placeholder:text-gray-400 focus:outline-none ${
+            className={`rounded-xl h-20 mb-10 mt-3 w-full bg-gray-100 px-4 text-gray-600 placeholder:text-gray-400 focus:outline-none ${
               isLoading ? "animate-pulse" : ""
             }`}
             name="prompt"
@@ -38,7 +37,6 @@ const Chat = () => {
             placeholder="Message"
             disabled={isLoading}
           />
-          {/* <button type="submit">Submit</button> */}
         </form>
       </div>
     </div>

@@ -37,7 +37,6 @@ async def chat(request: Request, data: ChatData):
         )
         # draw_all_possible_flows(workflow)
         handler = workflow.run()
-        # return result["response"]
 
         await handler
 
@@ -55,7 +54,6 @@ async def chat(request: Request, data: ChatData):
         )
 
     except Exception as e:
-        # logger.exception("Error in chat engine", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error in workflow: {e}",
