@@ -1,3 +1,5 @@
+Watch the tutorial on YouTube 👇
+
 [![Dynamic Few-shot prompting using LlamaIndex Workflows](https://img.youtube.com/vi/Nseuty3LsxY/maxresdefault.jpg)](https://www.youtube.com/watch?v=Nseuty3LsxY)
 
 
